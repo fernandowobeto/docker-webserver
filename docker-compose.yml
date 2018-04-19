@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  web:
+    container_name: web
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./public:/public
+      - ./src/site.conf:/etc/nginx/nginx.conf
+      - ./src/nginx/sites-enabled/:/etc/nginx/sites-enabled/
+      - ./src/nginx/logs:/var/log/nginx/
+
+  php:
+    container_name: php
+    build:
+      context: ./src/php7
+    volumes:
+      - ./public:/public
+
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      LC_ALL: C.UTF-8
+      POSTGRES_PASSWORD: 123

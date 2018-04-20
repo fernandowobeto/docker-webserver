@@ -1,6 +1,0 @@
-2018/04/19 13:20:51 [error] 5#5: *2 open() "/public/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: develop.test, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081", referrer: "http://localhost:8081/"
-2018/04/19 14:43:20 [error] 5#5: *6 open() "/public/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: develop.test, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1:8081", referrer: "http://127.0.0.1:8081/"
-2018/04/19 20:45:06 [error] 5#5: *1 open() "/public/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: develop.test, request: "GET /favicon.ico HTTP/1.1", host: "develop.test", referrer: "http://develop.test/"
-2018/04/19 20:47:58 [error] 5#5: *6 open() "/public/novo/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: novo.test, request: "GET /favicon.ico HTTP/1.1", host: "novo.test", referrer: "http://novo.test/"
-2018/04/19 21:00:31 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:10
-2018/04/19 21:04:05 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:10

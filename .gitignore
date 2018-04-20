@@ -1,3 +1,5 @@
 .idea/
 public/
 src/nginx/logs/
+src/mysql/data/
+src/nginx/sites-enabled/

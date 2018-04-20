@@ -46,7 +46,7 @@ RUN docker-php-ext-install json
 
 # Install extensions through the scripts the container provides
 # Here we install the pdo_mysql extensions to access MySQL.
-RUN docker-php-ext-install pdo pdo_mysql opcache
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
 RUN apt-get install -y libpq-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \

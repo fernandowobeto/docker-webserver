@@ -1,4 +1,4 @@
-PHP applications using Nginx, postgre and PHP7.
+PHP applications using Nginx, postgresql, mysql and PHP7.
 * Add host conf in /src/nginx/sites-enabled
 * Add host in the /etc/hosts file
 * Run `docker-compose up`

@@ -6,4 +6,4 @@ PHP applications using Nginx, postgresql, mysql and PHP7.
 
 ----
 
-* Compose file version 3; PHP Extension: memcached, opcache, pdo_mysql, gd, iconv, mcrypt, intl, mbstring, curl, zip, json, xdebug
+* Compose file version 3; PHP Extension: memcached, opcache, pdo_mysql,pdo_pgsql, gd, iconv, mcrypt, intl, mbstring, curl, zip, json, xdebug

@@ -18,25 +18,31 @@ services:
       context: ./src/php7
     volumes:
       - ./public:/public
+    environment:
+        XDEBUG_CONFIG: remote_host=127.0.0.1
 
   postgres:
     container_name: postgres
     image: postgres
     restart: always
     ports:
-      - "5433:5432"
+      - "5432:5432"
     environment:
       LC_ALL: C.UTF-8
       POSTGRES_PASSWORD: 123
+    volumes:
+      - ./src/postgres/data:/var/lib/postgresql/data
 
   mysql:
     container_name: mysql
     image: mysql
+    command: --default-authentication-plugin=mysql_native_password
     restart: always
     ports:
       - "3306:3306"
     volumes:
-      - ./src/mysql/config-file.cnf:/etc/mysql/conf.d/config-file.cnf
       - ./src/mysql/data:/var/lib/mysql
     environment:
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: 123
       MYSQL_ROOT_PASSWORD: 123

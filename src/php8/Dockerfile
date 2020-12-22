@@ -1,8 +1,8 @@
-FROM php:7.4-fpm
+FROM php:8.0.0-fpm
 
 RUN apt-get update
 
-# Install iconv, mcryot, gd
+# Install iconv, mcrypt, gd
 RUN apt-get install -y libfreetype6-dev
 RUN apt-get install -y libjpeg62-turbo-dev
 RUN apt-get install -y libmcrypt-dev
@@ -31,9 +31,6 @@ RUN docker-php-ext-install curl
 
 # Install zip
 RUN docker-php-ext-install zip
-
-# Install json
-RUN docker-php-ext-install json
 
 # Install extensions through the scripts the container provides
 # Here we install the pdo_mysql extensions to access MySQL.

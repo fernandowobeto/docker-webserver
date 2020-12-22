@@ -11,16 +11,14 @@ services:
       - ./src/site.conf:/etc/nginx/nginx.conf
       - ./src/nginx/sites-enabled/:/etc/nginx/sites-enabled/
       - ./src/nginx/logs:/var/log/nginx/
-
   php:
     container_name: php
     build:
-      context: ./src/php7
+      context: ./src/php8
     volumes:
       - ./public:/public
     environment:
         XDEBUG_CONFIG: remote_host=127.0.0.1
-
   postgres:
     container_name: postgres
     image: postgres
